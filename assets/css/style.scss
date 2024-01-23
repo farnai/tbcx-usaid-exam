@@ -139,3 +139,13 @@ opacity: 0.9;
     }
   }
 }
+.training-courses{
+padding: 40px 0 55px;
+  background: $black-primary;
+  color: $white-color;
+  .training-info{
+    .training-item{
+      border: 1px solid rgb(255 255 255);
+    }
+  }
+}
