@@ -1,0 +1,20 @@
+$font-family-tbc-x: 'TBC X';
+@font-face {
+  font-family: $font-family-tbc-x;
+  src: url('../fonts/TBCX-Regular.woff2') format('woff2'),
+  url('../fonts/TBCX-Regular.woff') format('woff'),
+  url('../fonts/TBCX-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+$black-primary: #1a1e1f;
+$black-secondary: #2b2b2b;
+$white-color: white;
+$blue-color-active: #00a3e0;
+
+
+body {
+  font-family: $font-family-tbc-x, sans-serif;
+}
