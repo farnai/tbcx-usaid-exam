@@ -5,8 +5,51 @@
   font-style: normal;
   font-display: swap;
 }
+a {
+  transition: all 0.3s ease;
+}
+a:hover {
+  transition: all 0.3s ease;
+}
+
 body {
+  margin: 0;
+  padding: 0;
   font-family: "TBC X", sans-serif;
+}
+
+.container {
+  max-width: 970px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+header {
+  background: #1a1e1f;
+  padding: 20px 15px;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+header ul li {
+  list-style-type: none;
+}
+header ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0 10px;
+  font-size: 14px;
+}
+header ul li a:hover {
+  color: #00a3e0;
 }
 
 /*# sourceMappingURL=style.css.map */
