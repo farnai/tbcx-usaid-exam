@@ -12,6 +12,10 @@ a:hover {
   transition: all 0.3s ease;
 }
 
+img {
+  max-width: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -28,6 +32,10 @@ body {
 header {
   background: #1a1e1f;
   padding: 20px 15px;
+  position: sticky;
+  top: 0;
+  opacity: 1;
+  transition: all 0.3s ease;
 }
 header .container {
   display: flex;
@@ -41,6 +49,7 @@ header ul {
 }
 header ul li {
   list-style-type: none;
+  padding: 0 10px;
 }
 header ul li a {
   color: white;
@@ -50,6 +59,10 @@ header ul li a {
 }
 header ul li a:hover {
   color: #00a3e0;
+}
+header.fixed {
+  opacity: 0.9;
+  transition: all 0.3s ease;
 }
 
 /*# sourceMappingURL=style.css.map */
