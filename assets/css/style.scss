@@ -1,9 +1,21 @@
-$font-family-tbc-x: 'TBC X';
+$tbc-x: 'TBC X';
+$tbc-black: 'TBC X Black'; // Corrected variable name
+
 @font-face {
-  font-family: $font-family-tbc-x;
+  font-family: $tbc-x;
   src: url('../fonts/TBCX-Regular.woff2') format('woff2'),
   url('../fonts/TBCX-Regular.woff') format('woff'),
   url('../fonts/TBCX-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $tbc-black;
+  src: url('../fonts/TBCX-Black.woff2') format('woff2'),
+  url('../fonts/TBCX-Black.woff') format('woff'),
+  url('../fonts/TBCX-Black.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -13,6 +25,9 @@ $black-primary: #1a1e1f;
 $black-secondary: #2b2b2b;
 $white-color: white;
 $blue-color-active: #00a3e0;
+h1 {
+  font-size: 42px;
+}
 a{
   transition: all 0.3s ease;
   &:hover{
@@ -25,16 +40,14 @@ img{
 body {
   margin: 0;
   padding: 0;
-  font-family: $font-family-tbc-x, sans-serif;
+  font-family: $tbc-x;
 }
-
 .container {
   max-width: 970px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
 }
-
 header {
   background: $black-primary;
   padding: 20px 15px;
@@ -42,6 +55,7 @@ header {
   top: 0;
   opacity: 1;
   transition: all .3s ease;
+  z-index: 5;
 
   .container {
     display: flex;
@@ -67,10 +81,61 @@ header {
           color: $blue-color-active;
         }
       }
+
+      &.active {
+        a {
+          color: $blue-color-active;
+        }
+      }
     }
   }
   &.fixed{
 opacity: 0.9;
     transition: all .3s ease;
+  }
+}
+.hero-banner {
+  position: relative;
+  display: flex;
+
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color:$white-color;
+    font-weight: bold;
+    margin: 0 auto;
+    max-width: 970px;
+    width: 100%;
+    font-family: $tbc-black;
+    font-size: 34px;
+    line-height: 1.8;
+
+    span{
+      display: block;
+      font-size: 42px;
+    }
+  }
+}
+.program-description{
+  background: $black-secondary;
+  padding: 65px 0;
+  font-size: 28px;
+  p{
+    margin: 0;
+    color: white;
+    line-height: 1.8;
+  }
+  a{
+    color: $blue-color-active;
+    text-decoration: none;
+    display: block;
+    margin-top: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    &:hover{
+      color: #aaaaaa;
+    }
   }
 }

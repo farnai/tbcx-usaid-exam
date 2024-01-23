@@ -5,6 +5,17 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "TBC X Black";
+  src: url("../fonts/TBCX-Black.woff2") format("woff2"), url("../fonts/TBCX-Black.woff") format("woff"), url("../fonts/TBCX-Black.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+h1 {
+  font-size: 42px;
+}
+
 a {
   transition: all 0.3s ease;
 }
@@ -19,7 +30,7 @@ img {
 body {
   margin: 0;
   padding: 0;
-  font-family: "TBC X", sans-serif;
+  font-family: "TBC X";
 }
 
 .container {
@@ -36,6 +47,7 @@ header {
   top: 0;
   opacity: 1;
   transition: all 0.3s ease;
+  z-index: 5;
 }
 header .container {
   display: flex;
@@ -60,9 +72,57 @@ header ul li a {
 header ul li a:hover {
   color: #00a3e0;
 }
+header ul li.active a {
+  color: #00a3e0;
+}
 header.fixed {
   opacity: 0.9;
   transition: all 0.3s ease;
+}
+
+.hero-banner {
+  position: relative;
+  display: flex;
+}
+.hero-banner h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  margin: 0 auto;
+  max-width: 970px;
+  width: 100%;
+  font-family: "TBC X Black";
+  font-size: 34px;
+  line-height: 1.8;
+}
+.hero-banner h1 span {
+  display: block;
+  font-size: 42px;
+}
+
+.program-description {
+  background: #2b2b2b;
+  padding: 65px 0;
+  font-size: 28px;
+}
+.program-description p {
+  margin: 0;
+  color: white;
+  line-height: 1.8;
+}
+.program-description a {
+  color: #00a3e0;
+  text-decoration: none;
+  display: block;
+  margin-top: 60px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.program-description a:hover {
+  color: #aaaaaa;
 }
 
 /*# sourceMappingURL=style.css.map */
