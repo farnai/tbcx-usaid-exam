@@ -188,4 +188,109 @@ header.fixed {
   font-size: 14px;
 }
 
+.partners {
+  background: #2b2b2b;
+  padding-bottom: 80px;
+}
+.partners .container > h2 {
+  padding: 34px 0 30px;
+  margin: 0;
+  color: white;
+  font-weight: 100;
+}
+.partners .partners-logo {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100px;
+  margin-top: 70px;
+  padding-bottom: 30px;
+}
+.partners .slideshow-container {
+  position: relative;
+  /* Slideshow container */
+  /* Next & previous buttons */
+  /* The dots/bullets/indicators */
+  /* Fading animation */
+  /* On smaller screens, decrease text size */
+}
+.partners .slideshow-container .mySlides {
+  display: none;
+}
+.partners .slideshow-container img {
+  vertical-align: middle;
+}
+.partners .slideshow-container .slideshow-container {
+  position: relative;
+  margin: auto;
+}
+.partners .slideshow-container .prev {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.partners .slideshow-container .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.partners .slideshow-container .prev:hover, .partners .slideshow-container .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.partners .slideshow-container .dots {
+  text-align: center;
+}
+.partners .slideshow-container .dots .dot {
+  cursor: pointer;
+  height: 6px;
+  width: 6px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.partners .slideshow-container .active, .partners .slideshow-container .dot:hover {
+  background-color: #717171;
+}
+.partners .slideshow-container .fade {
+  animation-name: fade;
+  animation-duration: 4.5s;
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .partners .slideshow-container .prev, .partners .slideshow-container .next, .partners .slideshow-container .text {
+    font-size: 11px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
