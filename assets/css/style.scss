@@ -21,7 +21,7 @@ $tbc-black: 'TBC X Black'; // Corrected variable name
   font-display: swap;
 }
 
-$black-primary: #1a1e1f;
+$black-primary: #161616;
 $black-secondary: #2b2b2b;
 $white-color: white;
 $blue-color-active: #00a3e0;
@@ -43,7 +43,7 @@ body {
   font-family: $tbc-x;
 }
 .container {
-  max-width: 970px;
+  max-width: 980px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
@@ -140,18 +140,78 @@ opacity: 0.9;
   }
 }
 .training-courses{
-padding: 40px 0 55px;
+  padding: 34px 0 55px 0;
   background: $black-primary;
   color: $white-color;
+
+  .container {
+    > h2 {
+      margin: 0 0 67px;
+      font-weight: 100;
+    }
   .training-info{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap:  23px 35px;
+    grid-gap:  23px 38px;
+
     .training-item{
       border: 1px solid rgb(85 85 85);
       min-height: 412px;
       display: flex;
       flex-direction: column;
+      border-radius: 6px;
+      box-sizing: border-box;
+
+      img {
+        border-radius: 6px 6px 0 0;
+        margin-bottom: 40px;
+      }
+
+      h3 {
+        margin: 0 0 30px;
+        padding: 0 22px;
+        font-size: 18px;
+        line-height: 1;
+        font-weight: 100;
+      }
+
+      a {
+        margin-top: auto;
+        margin-bottom: 25px;
+        padding: 0 22px;
+        text-decoration: none;
+        display: flex;
+        line-height: 1;
+        align-items: center;
+        color: $blue-color-active;
+        font-weight: bold;
+
+        &:hover {
+          opacity: 0.9;
+        }
+
+        span {
+          display: block;
+
+          svg {
+            fill: $blue-color-active
+          }
+
+          &.icon-links {
+            height: 10px;
+            margin: 0 10px 0 0;
+          }
+        }
+
+
+      }
+
+      p {
+        margin:0 0 10px;
+        padding: 0 22px;
+        font-size: 14px;
+      }
     }
   }
+}
 }

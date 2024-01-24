@@ -34,14 +34,14 @@ body {
 }
 
 .container {
-  max-width: 970px;
+  max-width: 980px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 
 header {
-  background: #1a1e1f;
+  background: #161616;
   padding: 20px 15px;
   position: sticky;
   top: 0;
@@ -126,20 +126,66 @@ header.fixed {
 }
 
 .training-courses {
-  padding: 40px 0 55px;
-  background: #1a1e1f;
+  padding: 34px 0 55px 0;
+  background: #161616;
   color: white;
 }
-.training-courses .training-info {
+.training-courses .container > h2 {
+  margin: 0 0 67px;
+  font-weight: 100;
+}
+.training-courses .container .training-info {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 23px 35px;
+  grid-gap: 23px 38px;
 }
-.training-courses .training-info .training-item {
+.training-courses .container .training-info .training-item {
   border: 1px solid rgb(85, 85, 85);
   min-height: 412px;
   display: flex;
   flex-direction: column;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+.training-courses .container .training-info .training-item img {
+  border-radius: 6px 6px 0 0;
+  margin-bottom: 40px;
+}
+.training-courses .container .training-info .training-item h3 {
+  margin: 0 0 30px;
+  padding: 0 22px;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 100;
+}
+.training-courses .container .training-info .training-item a {
+  margin-top: auto;
+  margin-bottom: 25px;
+  padding: 0 22px;
+  text-decoration: none;
+  display: flex;
+  line-height: 1;
+  align-items: center;
+  color: #00a3e0;
+  font-weight: bold;
+}
+.training-courses .container .training-info .training-item a:hover {
+  opacity: 0.9;
+}
+.training-courses .container .training-info .training-item a span {
+  display: block;
+}
+.training-courses .container .training-info .training-item a span svg {
+  fill: #00a3e0;
+}
+.training-courses .container .training-info .training-item a span.icon-links {
+  height: 10px;
+  margin: 0 10px 0 0;
+}
+.training-courses .container .training-info .training-item p {
+  margin: 0 0 10px;
+  padding: 0 22px;
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=style.css.map */
