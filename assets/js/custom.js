@@ -1,10 +1,10 @@
 /// header stick function
 document.addEventListener("DOMContentLoaded", function () {
-    var header = document.getElementById("header-sticky");
-    var scrollPos = 0;
+    let header = document.getElementById("header-sticky");
+    let scrollPos = 0;
 
     window.addEventListener("scroll", function () {
-        var currentScrollPos = window.pageYOffset;
+        let currentScrollPos = window.pageYOffset;
 
         if (currentScrollPos > scrollPos) {
             // Scrolling down
@@ -63,7 +63,7 @@ setInterval(autoPlay, 4000);
 
 // Accordion
 document.addEventListener('DOMContentLoaded', function () {
-    var accordions = document.querySelectorAll('.accordion-item');
+    let accordions = document.querySelectorAll('.accordion-item');
 
     accordions.forEach(function (item) {
         item.addEventListener('click', function () {

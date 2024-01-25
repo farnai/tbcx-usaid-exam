@@ -28,6 +28,16 @@ $blue-color-active: #00a3e0;
 h1 {
   font-size: 42px;
 }
+
+h2 {
+  font-weight: 100;
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 100;
+}
 a{
   transition: all 0.3s ease;
   &:hover{
@@ -230,12 +240,11 @@ opacity: 0.9;
 
   .partners-logo {
     max-width: 980px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 100px;
-    margin-top: 70px;
+    margin: 70px auto 0;
     padding-bottom: 30px;
 
     &.center-logo {
@@ -362,37 +371,69 @@ opacity: 0.9;
 }
 
 .faq {
-  .accordion {
-    .accordion-item {
-      overflow: hidden;
-      max-height: 50px;
-      transition: max-height 0.3s ease-out;
+  background: $black-primary;
+  color: $white-color;
+  padding: 100px 0 ;
+
+  .container {
+    max-width: 900px;
+
+
+    .faq-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h2 {
+        font-weight: 100;
+        font-size: 24px;
+      }
+
+      a {
+        color: $blue-color-active;
+        font-size: 20px;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+          color: rgb(170 170 170);
+        }
+      }
     }
 
-    .accordion-item.active {
-      max-height: 500px; /* Set to a value larger than the expected content height */
+    .accordion-item {
+      border-bottom: 1px solid rgb(53, 49, 49);
+      margin-bottom: 10px;
+      overflow: hidden;
+
+      h3 {
+
+        padding: 25px 0;
+        margin: 0;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 100;
+    }
+
+      .accordion-text {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+        .reading-text{
+          padding: 30px;
+        }
+        p{
+          font-size: 14px;
+          line-height: 1.8;
+          &:last-child{
+            margin-bottom: 30px;
+          }
+        }
+      }
+
+      &.active .accordion-text {
+        max-height: 1000px;
     }
   }
-}
-.accordion-item {
-  border: 1px solid #ddd;
-  margin-bottom: 10px;
-  overflow: hidden;
-}
-
-.accordion-item h3 {
-  background-color: #f1f1f1;
-  padding: 10px;
-  margin: 0;
-  cursor: pointer;
-}
-
-.accordion-item .accordeon-text {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-out;
-}
-
-.accordion-item.active .accordeon-text {
-  max-height: 1000px;
+  }
 }

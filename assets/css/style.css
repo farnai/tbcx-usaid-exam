@@ -16,6 +16,16 @@ h1 {
   font-size: 42px;
 }
 
+h2 {
+  font-weight: 100;
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 100;
+}
+
 a {
   transition: all 0.3s ease;
 }
@@ -200,12 +210,11 @@ header.fixed {
 }
 .partners .partners-logo {
   max-width: 980px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 100px;
-  margin-top: 70px;
+  margin: 70px auto 0;
   padding-bottom: 30px;
 }
 .partners .partners-logo.center-logo {
@@ -308,35 +317,60 @@ header.fixed {
   }
 }
 
-.faq .accordion .accordion-item {
-  overflow: hidden;
-  max-height: 50px;
-  transition: max-height 0.3s ease-out;
+.faq {
+  background: #161616;
+  color: white;
+  padding: 100px 0;
 }
-.faq .accordion .accordion-item.active {
-  max-height: 500px; /* Set to a value larger than the expected content height */
+.faq .container {
+  max-width: 900px;
 }
-
-.accordion-item {
-  border: 1px solid #ddd;
+.faq .container .faq-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq .container .faq-title h2 {
+  font-weight: 100;
+  font-size: 24px;
+}
+.faq .container .faq-title a {
+  color: #00a3e0;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.faq .container .faq-title a:hover {
+  color: rgb(170, 170, 170);
+}
+.faq .container .accordion-item {
+  border-bottom: 1px solid rgb(53, 49, 49);
   margin-bottom: 10px;
   overflow: hidden;
 }
-
-.accordion-item h3 {
-  background-color: #f1f1f1;
-  padding: 10px;
+.faq .container .accordion-item h3 {
+  padding: 25px 0;
   margin: 0;
   cursor: pointer;
+  font-size: 18px;
+  font-weight: 100;
 }
-
-.accordion-item .accordeon-text {
+.faq .container .accordion-item .accordion-text {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease-out;
 }
-
-.accordion-item.active .accordeon-text {
+.faq .container .accordion-item .accordion-text .reading-text {
+  padding: 30px;
+}
+.faq .container .accordion-item .accordion-text p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+.faq .container .accordion-item .accordion-text p:last-child {
+  margin-bottom: 30px;
+}
+.faq .container .accordion-item.active .accordion-text {
   max-height: 1000px;
 }
 
