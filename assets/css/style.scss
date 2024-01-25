@@ -372,7 +372,7 @@ opacity: 0.9;
 .faq {
   background: $black-primary;
   color: $white-color;
-  padding: 100px 0 ;
+  padding: 100px 0 80px;
 
   .container {
     max-width: 900px;
@@ -402,7 +402,7 @@ opacity: 0.9;
 
     .accordion-item {
       border-bottom: 1px solid rgb(53, 49, 49);
-      margin-bottom: 10px;
+
       overflow: hidden;
 
       h3 {
@@ -412,6 +412,22 @@ opacity: 0.9;
         cursor: pointer;
         font-size: 18px;
         font-weight: 100;
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+          border: solid white;
+          border-width: 0 1px 1px 0;
+          display: inline-block;
+          padding: 3px;
+          vertical-align: middle;
+
+          right: 5px;
+          top: 50%;
+          transform: translateY(-50%)  rotate(45deg);
+
+        }
     }
 
       .accordion-text {
@@ -440,10 +456,52 @@ opacity: 0.9;
 footer {
   background: rgb(26 30 31);
   color: white;
+  padding: 60px 0 40px;
   .top-footer , .bottom-footer{
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
+  a {
+    display: block;
+    margin-left: 10px;
+    font-size: 14px;
+    text-decoration: none;
+    color: $white-color;
+  }
+
+  .top-footer {
+    margin-bottom: 10px;
+
+    .social {
+      display: flex;
+    }
+
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .bottom-footer {
+
+    .terms {
+      a {
+        margin-left: 0;
+      }
+    }
+
+    button {
+      background: #00aef3;
+      outline: none;
+      border: none;
+      padding: 10px 35px;
+      color: $white-color;
+      border-radius: 6px;
+      font-size: 16px;
+      font-family: "TBC X", sans-serif;
+      margin-top: 10px;
+    }
+  }
 }
