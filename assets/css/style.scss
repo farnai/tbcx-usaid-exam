@@ -369,7 +369,6 @@ opacity: 0.9;
     }
   }
 }
-
 .faq {
   background: $black-primary;
   color: $white-color;
@@ -436,4 +435,15 @@ opacity: 0.9;
     }
   }
   }
+}
+
+footer {
+  background: rgb(26 30 31);
+  color: white;
+  .top-footer , .bottom-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
 }

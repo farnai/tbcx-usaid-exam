@@ -374,4 +374,14 @@ header.fixed {
   max-height: 1000px;
 }
 
+footer {
+  background: rgb(26, 30, 31);
+  color: white;
+}
+footer .top-footer, footer .bottom-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 /*# sourceMappingURL=style.css.map */
