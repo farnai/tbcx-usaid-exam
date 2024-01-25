@@ -208,6 +208,23 @@ header.fixed {
   margin-top: 70px;
   padding-bottom: 30px;
 }
+.partners .partners-logo.center-logo {
+  justify-content: center;
+}
+.partners .partners-logo picture {
+  justify-content: space-between;
+  display: flex;
+  text-align: center;
+  max-width: 250px;
+  height: auto;
+}
+.partners .partners-logo picture img {
+  vertical-align: middle;
+}
+.partners .partners-logo picture:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
 .partners .slideshow-container {
   position: relative;
   /* Slideshow container */
@@ -219,48 +236,46 @@ header.fixed {
 .partners .slideshow-container .mySlides {
   display: none;
 }
-.partners .slideshow-container img {
-  vertical-align: middle;
-}
 .partners .slideshow-container .slideshow-container {
   position: relative;
   margin: auto;
 }
-.partners .slideshow-container .prev {
+.partners .slideshow-container .prev, .partners .slideshow-container .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
-  padding: 16px;
-  margin-top: -22px;
   color: white;
   font-weight: bold;
-  font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
   user-select: none;
+  transform: translateY(-50%);
+  background: none;
+  outline: none;
+  border: none;
+}
+.partners .slideshow-container .prev svg, .partners .slideshow-container .next svg {
+  width: 22px;
+  height: 35px;
+  z-index: 12;
+  fill: white;
+}
+.partners .slideshow-container .prev {
+  left: 100px;
 }
 .partners .slideshow-container .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  right: 0;
-  border-radius: 3px 0 0 3px;
+  transform: translateY(-50%) rotate(180deg);
+  right: 100px;
 }
 .partners .slideshow-container .prev:hover, .partners .slideshow-container .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0.5;
+  transition: all 0.6s ease;
 }
 .partners .slideshow-container .dots {
   text-align: center;
+  margin-top: -30px;
+  position: relative;
+  z-index: 3;
 }
 .partners .slideshow-container .dots .dot {
   cursor: pointer;

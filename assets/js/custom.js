@@ -59,5 +59,5 @@ function autoPlay() {
 }
 
 // Set interval for autoplay (change the value in milliseconds as needed)
-setInterval(autoPlay, 3000);
+setInterval(autoPlay, 4000);
 // Adjust the interval as needed (e.g., 2000 for 2 seconds)
