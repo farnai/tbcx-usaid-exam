@@ -60,4 +60,21 @@ function autoPlay() {
 
 // Set interval for autoplay (change the value in milliseconds as needed)
 setInterval(autoPlay, 4000);
-// Adjust the interval as needed (e.g., 2000 for 2 seconds)
+
+// Accordion
+document.addEventListener('DOMContentLoaded', function () {
+    var accordions = document.querySelectorAll('.accordion-item');
+
+    accordions.forEach(function (item) {
+        item.addEventListener('click', function () {
+            accordions.forEach(function (accordion) {
+                if (accordion !== item) {
+                    accordion.classList.remove('active');
+                }
+            });
+
+            this.classList.toggle('active');
+        });
+    });
+});
+

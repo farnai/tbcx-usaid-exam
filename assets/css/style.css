@@ -308,4 +308,36 @@ header.fixed {
   }
 }
 
+.faq .accordion .accordion-item {
+  overflow: hidden;
+  max-height: 50px;
+  transition: max-height 0.3s ease-out;
+}
+.faq .accordion .accordion-item.active {
+  max-height: 500px; /* Set to a value larger than the expected content height */
+}
+
+.accordion-item {
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.accordion-item h3 {
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.accordion-item .accordeon-text {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+.accordion-item.active .accordeon-text {
+  max-height: 1000px;
+}
+
 /*# sourceMappingURL=style.css.map */
