@@ -52,7 +52,7 @@ body {
 
 header {
   background: #161616;
-  padding: 20px 15px;
+  padding: 20px 0;
   position: sticky;
   top: 0;
   opacity: 1;
@@ -94,6 +94,15 @@ header.fixed {
   position: relative;
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  .hero-banner {
+    min-height: 220px;
+  }
+}
+.hero-banner img {
+  width: 100%;
+  object-fit: cover;
+}
 .hero-banner h1 {
   position: absolute;
   top: 50%;
@@ -102,11 +111,18 @@ header.fixed {
   color: white;
   font-weight: bold;
   margin: 0 auto;
-  max-width: 970px;
+  max-width: 1010px;
   width: 100%;
   font-family: "TBC X Black";
   font-size: 34px;
   line-height: 1.8;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+  .hero-banner h1 {
+    font-size: 22px;
+  }
 }
 .hero-banner h1 span {
   display: block;
@@ -118,10 +134,20 @@ header.fixed {
   padding: 65px 0;
   font-size: 28px;
 }
+@media screen and (max-width: 768px) {
+  .program-description {
+    padding: 30px 0;
+  }
+}
 .program-description p {
   margin: 0;
   color: white;
   line-height: 1.8;
+}
+@media screen and (max-width: 768px) {
+  .program-description p {
+    font-size: 16px;
+  }
 }
 .program-description a {
   color: #00a3e0;
@@ -130,6 +156,11 @@ header.fixed {
   margin-top: 60px;
   font-size: 20px;
   font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .program-description a {
+    margin-top: 20px;
+  }
 }
 .program-description a:hover {
   color: #aaaaaa;
@@ -149,6 +180,18 @@ header.fixed {
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 23px 38px;
 }
+@media screen and (max-width: 991px) {
+  .training-courses .container .training-info {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .training-courses .container .training-info {
+    grid-template-columns: 1fr;
+    grid-gap: 15px 20px;
+  }
+}
 .training-courses .container .training-info .training-item {
   border: 1px solid rgb(85, 85, 85);
   min-height: 412px;
@@ -161,12 +204,23 @@ header.fixed {
   border-radius: 6px 6px 0 0;
   margin-bottom: 40px;
 }
+@media screen and (max-width: 768px) {
+  .training-courses .container .training-info .training-item img {
+    margin-bottom: 30px;
+  }
+}
 .training-courses .container .training-info .training-item h3 {
   margin: 0 0 30px;
   padding: 0 22px;
   font-size: 18px;
   line-height: 1;
   font-weight: 100;
+}
+@media screen and (max-width: 768px) {
+  .training-courses .container .training-info .training-item h3 {
+    margin-bottom: 20px;
+    line-height: inherit;
+  }
 }
 .training-courses .container .training-info .training-item a {
   margin-top: auto;
@@ -202,6 +256,11 @@ header.fixed {
   background: #2b2b2b;
   padding-bottom: 80px;
 }
+@media screen and (max-width: 768px) {
+  .partners {
+    padding-bottom: 30px;
+  }
+}
 .partners .container > h2 {
   padding: 34px 0 30px;
   margin: 0;
@@ -215,7 +274,19 @@ header.fixed {
   align-items: center;
   min-height: 100px;
   margin: 70px auto 0;
-  padding-bottom: 30px;
+  padding: 0 15px 30px;
+}
+@media screen and (max-width: 991px) {
+  .partners .partners-logo {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .partners .partners-logo {
+    flex-direction: column;
+    margin: 20px auto 0;
+    min-height: 300px;
+  }
 }
 .partners .partners-logo.center-logo {
   justify-content: center;
@@ -236,10 +307,6 @@ header.fixed {
 }
 .partners .slideshow-container {
   position: relative;
-  /* Slideshow container */
-  /* Next & previous buttons */
-  /* The dots/bullets/indicators */
-  /* Fading animation */
   /* On smaller screens, decrease text size */
 }
 .partners .slideshow-container .mySlides {
@@ -272,9 +339,29 @@ header.fixed {
 .partners .slideshow-container .prev {
   left: 100px;
 }
+@media screen and (max-width: 1344px) {
+  .partners .slideshow-container .prev {
+    left: 10px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .partners .slideshow-container .prev {
+    display: none;
+  }
+}
 .partners .slideshow-container .next {
   transform: translateY(-50%) rotate(180deg);
   right: 100px;
+}
+@media screen and (max-width: 1344px) {
+  .partners .slideshow-container .next {
+    right: 10px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .partners .slideshow-container .next {
+    display: none;
+  }
 }
 .partners .slideshow-container .prev:hover, .partners .slideshow-container .next:hover {
   opacity: 0.5;
@@ -311,7 +398,7 @@ header.fixed {
     opacity: 1;
   }
 }
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 768px) {
   .partners .slideshow-container .prev, .partners .slideshow-container .next, .partners .slideshow-container .text {
     font-size: 11px;
   }
@@ -321,6 +408,11 @@ header.fixed {
   background: #161616;
   color: white;
   padding: 100px 0 80px;
+}
+@media screen and (max-width: 768px) {
+  .faq {
+    padding: 30px 0 30px;
+  }
 }
 .faq .container {
   max-width: 900px;
@@ -334,11 +426,21 @@ header.fixed {
   font-weight: 100;
   font-size: 24px;
 }
+@media screen and (max-width: 768px) {
+  .faq .container .faq-title h2 {
+    font-size: 16px;
+  }
+}
 .faq .container .faq-title a {
   color: #00a3e0;
   font-size: 20px;
   text-decoration: none;
   font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .faq .container .faq-title a {
+    font-size: 16px;
+  }
 }
 .faq .container .faq-title a:hover {
   color: rgb(170, 170, 170);
@@ -354,6 +456,11 @@ header.fixed {
   font-size: 18px;
   font-weight: 100;
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  .faq .container .accordion-item h3 {
+    font-size: 16px;
+  }
 }
 .faq .container .accordion-item h3:after {
   content: "";

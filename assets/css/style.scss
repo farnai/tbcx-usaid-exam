@@ -25,6 +25,12 @@ $black-primary: #161616;
 $black-secondary: #2b2b2b;
 $white-color: white;
 $blue-color-active: #00a3e0;
+
+
+$small-desktop: 1344px;
+$tablet: 991px;
+$mobile: 768px;
+$small-mobile: 425px;
 h1 {
   font-size: 42px;
 }
@@ -60,7 +66,7 @@ body {
 }
 header {
   background: $black-primary;
-  padding: 20px 15px;
+  padding: 20px 0;
   position: sticky;
   top: 0;
   opacity: 1;
@@ -107,7 +113,15 @@ opacity: 0.9;
 .hero-banner {
   position: relative;
   display: flex;
+  @media screen and (max-width: $mobile) {
+    min-height: 220px;
+  }
+img{
+  width: 100%;
 
+  object-fit: cover;
+
+}
   h1 {
     position: absolute;
     top: 50%;
@@ -116,11 +130,16 @@ opacity: 0.9;
     color:$white-color;
     font-weight: bold;
     margin: 0 auto;
-    max-width: 970px;
+    max-width: 1010px;
     width: 100%;
     font-family: $tbc-black;
     font-size: 34px;
     line-height: 1.8;
+    padding: 0 15px;
+    box-sizing: border-box;
+    @media screen and (max-width: $mobile) {
+      font-size: 22px;
+    }
 
     span{
       display: block;
@@ -132,10 +151,16 @@ opacity: 0.9;
   background: $black-secondary;
   padding: 65px 0;
   font-size: 28px;
+  @media screen and (max-width: $mobile) {
+    padding: 30px 0;
+  }
   p{
     margin: 0;
     color: white;
     line-height: 1.8;
+    @media screen and (max-width: $mobile) {
+      font-size: 16px;
+    }
   }
   a{
     color: $blue-color-active;
@@ -144,6 +169,9 @@ opacity: 0.9;
     margin-top: 60px;
     font-size: 20px;
     font-weight: bold;
+    @media screen and (max-width: $mobile) {
+      margin-top: 20px;
+    }
     &:hover{
       color: #aaaaaa;
     }
@@ -163,6 +191,13 @@ opacity: 0.9;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap:  23px 38px;
+    @media screen and (max-width: $tablet) {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 15px 20px;
+    } @media screen and (max-width: $mobile) {
+      grid-template-columns: 1fr ;
+      grid-gap: 15px 20px;
+    }
 
     .training-item{
       border: 1px solid rgb(85 85 85);
@@ -175,6 +210,9 @@ opacity: 0.9;
       img {
         border-radius: 6px 6px 0 0;
         margin-bottom: 40px;
+        @media screen and (max-width: $mobile) {
+          margin-bottom: 30px;
+        }
       }
 
       h3 {
@@ -183,6 +221,10 @@ opacity: 0.9;
         font-size: 18px;
         line-height: 1;
         font-weight: 100;
+        @media screen and (max-width: $mobile) {
+          margin-bottom:20px ;
+          line-height: inherit;
+        }
       }
 
       a {
@@ -228,6 +270,11 @@ opacity: 0.9;
 .partners {
   background: $black-secondary;
   padding-bottom:80px ;
+  @media screen and (max-width: $mobile) {
+
+    padding-bottom:30px ;
+
+  }
 
   .container {
     > h2 {
@@ -245,7 +292,14 @@ opacity: 0.9;
     align-items: center;
     min-height: 100px;
     margin: 70px auto 0;
-    padding-bottom: 30px;
+    padding: 0 15px 30px;
+    @media screen and (max-width: $tablet) {
+      gap: 20px;
+    }@media screen and (max-width: $mobile) {
+      flex-direction: column;
+    margin: 20px auto 0;
+    min-height: 300px;
+    }
 
     &.center-logo {
       justify-content: center;
@@ -277,17 +331,11 @@ opacity: 0.9;
       display: none;
     }
 
-
-
-    /* Slideshow container */
-
     .slideshow-container {
 
       position: relative;
       margin: auto;
     }
-
-    /* Next & previous buttons */
     .prev, .next {
       cursor: pointer;
       position: absolute;
@@ -312,16 +360,27 @@ opacity: 0.9;
     }
     .prev {
       left: 100px;
+      @media screen and (max-width: $small-desktop) {
+        left: 10px;
+      }
+      @media screen and (max-width: $tablet) {
+        display: none;
+      }
     }
     .next {
       transform: translateY(-50%) rotate(180deg);
       right: 100px;
+      @media screen and (max-width: $small-desktop) {
+        right: 10px;
+      }
+      @media screen and (max-width: $tablet) {
+        display: none;
+      }
     }
     .prev:hover, .next:hover {
       opacity: 0.5;
       transition: all 0.6s ease;
     }
-    /* The dots/bullets/indicators */
     .dots {
       text-align: center;
       margin-top: -30px;
@@ -339,13 +398,9 @@ opacity: 0.9;
         transition: background-color 0.6s ease;
       }
     }
-
     .active, .dot:hover {
       background-color: #717171;
     }
-
-    /* Fading animation */
-
     .fade {
       animation-name: fade;
       animation-duration: 4.5s;
@@ -362,7 +417,7 @@ opacity: 0.9;
     }
 
     /* On smaller screens, decrease text size */
-    @media only screen and (max-width: 300px) {
+    @media only screen and (max-width: $mobile) {
       .prev, .next, .text {
         font-size: 11px;
       }
@@ -373,7 +428,9 @@ opacity: 0.9;
   background: $black-primary;
   color: $white-color;
   padding: 100px 0 80px;
-
+  @media screen and (max-width: $mobile) {
+    padding: 30px 0 30px;
+  }
   .container {
     max-width: 900px;
 
@@ -386,6 +443,9 @@ opacity: 0.9;
       h2 {
         font-weight: 100;
         font-size: 24px;
+        @media screen and (max-width: $mobile) {
+          font-size: 16px;
+        }
       }
 
       a {
@@ -393,6 +453,9 @@ opacity: 0.9;
         font-size: 20px;
         text-decoration: none;
         font-weight: bold;
+        @media screen and (max-width: $mobile) {
+          font-size: 16px;
+        }
 
         &:hover {
           color: rgb(170 170 170);
@@ -413,6 +476,9 @@ opacity: 0.9;
         font-size: 18px;
         font-weight: 100;
         position: relative;
+        @media screen and (max-width: $mobile) {
+          font-size: 16px;
+        }
 
         &:after {
           content: "";
