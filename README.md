@@ -2,7 +2,7 @@
 
 ## Description:
 
-* This project is a responsive web application that allows users to  learn about the TBC x USAID joint project, where they will study react.js course. Key features include Key features include a one-page, promotional landing page.
+* This project is a responsive web application that allows users to  learn about the TBC x USAID joint project, where they will study the react.js course. Key features include Key features include a one-page, promotional landing page.
 
 ## Technologies Used:
 
@@ -10,13 +10,12 @@
 * SCSS
 * JavaScript
 
-
 ## Getting Started:
 
-1. **Prerequisites:**
+ **Prerequisites:**
    * - npm (version 9.2.0)
 
-2. **Installation:**
+ **Installation:**
    * Provide clear instructions on how to install dependencies and set up the project.
    * Include commands for running the project locally.
  ```
@@ -89,9 +88,6 @@ Please follow these coding style conventions to maintain consistency across the 
 
 Thank you for your contributions! 🚀
 
-
-
-
 ### License
 
 This website is a derivative work based on the content found at [https://www.tbcacademy.ge/usaid](https://www.tbcacademy.ge/usaid). As such, it is subject to and governed by all the license conditions associated with the original website.
@@ -122,8 +118,6 @@ Please refer to the license terms of the original website for details on how the
    
     2. Open `index.html` in your preferred web browser.
 
-* **Contributor Covenant:**
-  - This project adheres to the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md).
-  - All contributors are expected to follow the guidelines outlined in the [Code of Conduct](CODE_OF_CONDUCT.md).
+
 
 Feel free to update or customize the content based on the specific details of your project. Add more information as needed, and provide clear instructions for users and contributors.
