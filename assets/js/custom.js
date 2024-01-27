@@ -78,3 +78,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
+//Mobile menu
+// Add an event listener to the burger menu
+document.getElementById('burger-menu').addEventListener('click', function() {
+    // Toggle the 'active' class on the burger menu
+    this.classList.toggle('active');
+
+    // Toggle the 'active' class on the primary menu
+    document.querySelector('.primary-menu').classList.toggle('active');
+});
