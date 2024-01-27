@@ -42,6 +42,30 @@ body {
   padding: 0;
   font-family: "TBC X";
 }
+body .overlay {
+  width: 0;
+  height: 100vh;
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: background-color 0.3s ease;
+}
+body.active {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+}
+body.active .overlay {
+  background: #161616;
+  opacity: 0.5;
+  transition: background-color 0.3s ease;
+  width: 100vw;
+}
 
 .container {
   max-width: 980px;
@@ -65,10 +89,12 @@ header .container {
   align-items: center;
 }
 header #burger-menu {
+  transition: all 0.4s ease;
   width: 26px;
   height: 21px;
   cursor: pointer;
   position: relative;
+  z-index: 16;
 }
 @media screen and (min-width: 769px) {
   header #burger-menu {
@@ -81,10 +107,12 @@ header #burger-menu > span {
   height: 3px;
   border-radius: 1.5px;
   background: white;
+  transition: all 0.4s ease;
 }
 header #burger-menu > span:first-child {
   width: 50%;
   top: 0;
+  transition: all 0.33s cubic-bezier(0.54, -0.81, 0.57, 0.57);
 }
 header #burger-menu > span:nth-child(2) {
   width: 100%;
@@ -95,31 +123,78 @@ header #burger-menu > span:nth-child(3) {
   width: 50%;
   right: 0;
   bottom: 0;
+  transition: all 0.33s cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+header #burger-menu.active > span {
+  position: absolute;
+  height: 3px;
+  border-radius: 1.5px;
+  background: white;
+  transition: transform 0.33s ease-out;
+  background-color: rgb(118, 118, 118);
+}
+header #burger-menu.active > span:first-child {
+  top: 0;
+  transform: rotate(45deg) translate(2px, 0.5px);
+  transition: all 0.33s cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+header #burger-menu.active > span:nth-child(2) {
+  transform: rotate(-45deg) translate(3px, -3px);
+}
+header #burger-menu.active > span:nth-child(3) {
+  right: 0;
+  bottom: 0;
+  transform: rotate(45deg) translate(-6px, -3px);
+  transition: all 0.33s cubic-bezier(0.54, -0.81, 0.57, 0.57);
 }
 @media screen and (max-width: 768px) {
   header nav.primary-menu {
-    display: none;
+    background: #2b2b2b;
+    width: 0;
+    transition: width 0.3s ease;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+    padding: 100px 0 20px;
   }
 }
-header nav.primary-menu.active {
-  display: block;
-  position: absolute;
-  right: 50px;
-  top: 0;
-  bottom: 0;
-  height: 100vh;
-}
-header nav.primary-menu.active ul {
-  flex-direction: column;
+@media screen and (max-width: 768px) {
+  header nav.primary-menu.active {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50vw;
+    box-sizing: border-box;
+    z-index: 14;
+    transition: width 0.3s ease;
+    overflow: visible;
+  }
 }
 header ul {
   margin: 0;
   padding: 0;
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  header ul {
+    flex-direction: column;
+  }
+}
 header ul li {
   list-style-type: none;
   padding: 0 10px;
+}
+@media screen and (max-width: 768px) {
+  header ul li {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+    white-space: nowrap;
+  }
 }
 header ul li a {
   color: white;
@@ -134,7 +209,7 @@ header ul li.active a {
   color: #00a3e0;
 }
 header.fixed {
-  opacity: 0.9;
+  background: rgba(22, 22, 22, 0.9);
   transition: all 0.3s ease;
 }
 
@@ -175,6 +250,11 @@ header.fixed {
 .hero-banner h1 span {
   display: block;
   font-size: 42px;
+}
+@media screen and (max-width: 768px) {
+  .hero-banner h1 span {
+    font-size: 26px;
+  }
 }
 
 .program-description {
@@ -567,6 +647,12 @@ footer .top-footer .social {
 footer p {
   font-size: 14px;
 }
+@media screen and (max-width: 425px) {
+  footer .bottom-footer {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+}
 footer .bottom-footer .terms a {
   margin-left: 0;
 }
@@ -580,6 +666,13 @@ footer .bottom-footer button {
   font-size: 16px;
   font-family: "TBC X", sans-serif;
   margin-top: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+footer .bottom-footer button:hover {
+  background-color: rgb(213, 213, 213);
+  color: #161616;
+  transition: all 0.3s ease;
 }
 
 /*# sourceMappingURL=style.css.map */

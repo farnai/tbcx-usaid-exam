@@ -87,4 +87,7 @@ document.getElementById('burger-menu').addEventListener('click', function() {
 
     // Toggle the 'active' class on the primary menu
     document.querySelector('.primary-menu').classList.toggle('active');
+
+    // Toggle the 'active' class on body
+    document.querySelector('body').classList.toggle('active');
 });
